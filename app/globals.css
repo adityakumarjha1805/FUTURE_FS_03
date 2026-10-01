@@ -1,26 +1,537 @@
-@import "tailwindcss";
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  padding: 0;
+  margin: 0;
+}
+.hero{
+  display: flex;
+  justify-content: center;
+ 
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.upper{
+  width: 85vw;
+  height: 67vh;
+  display: flex;
+  justify-content: flex-end;
+  border: 2px solid grey;
+ 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.right-upper{
+  width: 42vw;
+  height: 67vh;
+}
+img{
+  width: 42vw;
+  height: 67vh;
+  object-fit: cover;
+}
+.left-upper{
+  width: 43vw;
+  height: 67vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 60px;
+}
+.first-heading{
+  font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    color: rgb(65, 65, 65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 30px 0; */
+
+}
+.second-heading{
+  font-size: 50px;
+  font-weight: 400;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(65, 65, 65) ;
+}
+.third-heading{
+   font-size: 20px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    color: rgb(65, 65, 65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.middle{
+  padding: 75px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.middle-heading{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-weight: 500;
+   font-size: 30px;
+   color: rgb(65, 65, 65);
+}
+.middle-para{
+  font-weight: 400;
+  font-size: 20px;
+  color: rgb(65, 65, 65);
+  line-height: 28px;
+  padding: 15px 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+}
+.list-image{
+  width: 15vw;
+  height: 45vh;
+  
+}
+li{
+  display: flex;
+  flex-direction: column;
+ 
+}
+.lower-image{
+  width: 50px;
+  height: 50px;
+}
+.lower{
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+  /* height: 40vh; */
+}
+.lower-list{
+  padding: 0 82px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.lower-text{
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 16px;
+padding: 20px 0;
+font-weight: 600;
+color: rgb(55, 65, 81);
+position: relative;
+line-height: 25px;
+
+
+}
+.lower-text2{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 16px;
+padding: 20px 0;
+font-weight: 600;
+color: rgb(55, 65, 81);
+position: relative;
+
+line-height: 25px;
+}
+.lower-text3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-size: 16px;
+padding: 20px 0;
+font-weight: 600;
+color: rgb(55, 65, 81);
+position: relative;
+line-height: 25px;
+}
+.about-heading{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+   font-weight: 500;
+   font-size: 30px;
+   color: rgb(65, 65, 65);
+   display: flex;
+   justify-content: center ;
+   align-items: center;
+}
+.about-image{
+   width: 30vw;
+   height: 85vh;
+}
+.about-mainhero{
+  display: flex;
+  /* justify-content: flex-end; */
+  padding: 60px 130px;
+  height: 85vh;
+}
+.about-left{
+  width: 42vw;
+  height: 85vh;
+  /* padding: 0 30px; */
+}
+.about-right{
+    width: 35vw;
+    height: 80vh;
+    position: relative;
+    right: 40px;
+    top: 30px;
+
+}
+.firstpara{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(75, 85, 99);
+  line-height: 24px;
+}
+.secondpara{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(75, 85, 99);
+  line-height: 24px;
+}
+.firstparahead{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(31, 41, 55);
+  line-height: 24px;
+
+}
+.thirdpara{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(75, 85, 99);
+  line-height: 24px;
+}
+.middle-heading2{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-weight: 500;
+   font-size: 22px;
+   color: rgb(65, 65, 65);
+   display: flex;
+   justify-content: center;
   }
+   
+
+.first-about-list{
+ border: 1px solid grey;
+ width: 25vw;
+ height: 50vh;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.second-about-list{
+ border: 1px solid grey;
+  width: 25vw;
+ height: 50vh;
+  display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.third-about-list{
+ border: 1px solid grey;
+  width: 25vw;
+ height: 50vh;
+  display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.about-list{
+  display: flex;
+  justify-content: center;
+  
+  padding: 40px 0;
+  height: 60vh;
+  gap: 25px;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.first-firstabout-list-heading{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+}   
+.first-firstabout-list-para{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  width: 220px;
+}
+.second-secondabout-list-heading{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+}
+.second-secondabout-list-para{
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  width: 220px;
+}
+.third-thirdabout-list-heading{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+}
+.third-thirdabout-list-para{
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  width: 270px;
+}
+
+.contact-heading{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-weight: 500;
+   font-size: 30px;
+   color: rgb(65, 65, 65);
+   display: flex;
+   justify-content: center ;
+   align-items: center;
+}
+.contact-image{
+    width: 30vw;
+   height: 85vh;
+}
+.contact-mainhero{
+    display: flex;
+  /* justify-content: flex-end; */
+  padding: 60px 130px;
+  height: 85vh;
+}
+.first-line{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-weight: 600;
+   font-size: 25px;
+   color: black;
+   line-height: 28px;
+
+}
+.second-line{
+  padding: 23px 0;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(75, 85, 99);
+  line-height: 24px;
+}
+.third-line{
+    padding: 23px 0;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(75, 85, 99);
+  line-height: 24px;
+}
+.fourth-line{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+   font-weight: 600;
+   font-size: 25px;
+   color: black;
+   line-height: 28px;
+  }
+.fifth-line{
+   padding: 23px 0;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(75, 85, 99);
+  line-height: 24px;
+}
+.contact-button{
+  width: 130px;
+  height: 50px;
+  background-color: white;
+  border: 1px solid black;
+  font-weight: 400;
+  font-size: 14px;
+  cursor: pointer;
+}
+.right-contact{
+  padding: 40px 0;
+  position: relative;
+  right: 50px;
+}
+.left-contact{
+    width: 42vw;
+  height: 85vh;
+}
+.signin-hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 100vw; */
+  height: 70vh;
+}
+.signin-heading{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+   font-weight: 500;
+   font-size: 30px;
+   color: rgb(65, 65, 65);
+   display: flex;
+   justify-content: center ;
+   align-items: center;
+}
+.signin-input{
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+  gap: 10px;
+}
+.input{
+  width: 400px;
+  height: 40px;
+  /* padding: 0 20px; */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+  font-weight:lighter;
+  text-indent: 20px;
+ 
+}
+::placeholder{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(31, 41, 55);
+  text-indent: 20px;
+  line-height: 24px;
+}
+.login-link{
+  text-decoration: none;
+  color: rgb(31, 41, 55);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  display: flex;
+  
+}
+.login{
+  display: flex;
+  justify-content: end;
+ 
+}
+.signup-button{
+    width: 130px;
+  height: 40px;
+  background-color: black;
+  border: 1px solid black;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+}
+.login-hero{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+.login-heading{
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   font-weight: 500;
+   font-size: 30px;
+   color: rgb(65, 65, 65);
+   display: flex;
+   justify-content: center ;
+   align-items: center;
+}
+.login-input{
+    display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+  gap: 10px;
+}
+.signin{
+   display: flex;
+  justify-content: end;
+}
+.signin-link{
+    text-decoration: none;
+  color: rgb(31, 41, 55);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  display: flex;
+}
+
+.login2-button{
+    width: 130px;
+  height: 40px;
+  background-color: black;
+  border: 1px solid black;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+}
+.collection-heading{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+   font-weight: 500;
+   font-size: 30px;
+   color: rgb(65, 65, 65);
+   display: flex;
+   justify-content: center ;
+   align-items: center;
+   padding: 23px 0;
+}
+.collection-one{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 60px;
+
+}
+.collection-image{
+   width: 15vw;
+  height: 45vh;
+  cursor: pointer;
+  
+}
+.collection-description{
+padding: 20px 0;
+cursor: pointer;
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 15px;
+}
+.collection-two{
+    display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 60px;
+}
+.cart-button{
+  width: 100px;
+  height: 30px;
+  background-color: white;
+  border: 1px solid black;
+  font-size: 14px;
+  cursor: pointer;
+}
+.cart-in2{
+  position: relative;
+  top: 18px;
+}
+.cart-in6{
+  position: relative;
+  top: 18px;
+}
+.cart-in8{
+  position: relative;
+  top: 18px;
 }

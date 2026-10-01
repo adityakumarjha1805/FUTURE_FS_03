@@ -1,0 +1,12 @@
+.error {
+    max-width: 400px;
+    color: #a12622;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.error+div button:disabled {
+    cursor: wait;
+    opacity: 0.65;
+}

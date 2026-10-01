@@ -20,6 +20,25 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Backend setup
+
+The API uses MongoDB at `mongodb://127.0.0.1:27017/forever_store` by default. Start the local MongoDB server, copy `.env.example` to `.env.local`, and set a long random `JWT_SECRET` before running the app.
+
+Install dependencies with `npm install`, then load the starter catalog with `npm run seed`. The seed command can be run more than once without replacing existing product data.
+
+Available endpoints:
+
+- `POST /api/auth/register`, `POST /api/auth/login`, `GET /api/auth/me`, `POST /api/auth/logout`
+- `GET /api/products` with optional `q`, `category`, `page`, and `limit`; product creation, updates, and soft deletion require an admin session
+- `GET /api/cart`, `PUT /api/cart`, and `DELETE /api/cart` require a signed-in customer
+- `GET /api/orders` and `POST /api/orders` require a signed-in customer; order creation validates and reserves inventory
+- `POST /api/payments/razorpay/order` creates a Razorpay order, and `POST /api/payments/razorpay/verify` verifies its signature and captured status
+- `POST /api/contact` stores a contact message
+
+New accounts are customers. To grant an account product-management access, update its `role` to `admin` in the `users` collection. Orders remain pending until a captured Razorpay payment is verified.
+
+For Razorpay testing, add your Test Mode `RAZORPAY_KEY_ID` and `RAZORPAY_KEY_SECRET` to `.env.local`; keep the secret server-side. The checkout currency defaults to `USD` and can be changed with `RAZORPAY_CURRENCY`. Configure automatic payment capture in Razorpay so verified payments reach the captured state. Use Razorpay's test instruments in the checkout; no real payment is taken in Test Mode.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

@@ -1,0 +1,19 @@
+.footer2{
+ display: flex;
+ justify-content: center;
+ align-items: center;   
+ height: 30vh;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 16px;
+font-weight: 600;
+color: rgb(55, 65, 81);
+text-align: center;
+ line-height: 28px;
+}
+.line{
+    border: 1px solid grey;
+    height: 0px;
+    width: 98.7vw;
+    display: flex;
+    
+}
