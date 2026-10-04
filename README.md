@@ -50,6 +50,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
+This app uses Next.js server-rendered pages and Node.js API routes, so deploy it as a Next.js project (not as a static export).
+
+1. Push the project to a Git provider and import it into [Vercel](https://vercel.com/new). Vercel detects Next.js and the npm lockfile automatically; keep the default install, build (`npm run build`), and output settings.
+2. In the Vercel project's **Settings → Environment Variables**, add these variables for every environment you intend to use (Production, Preview, and/or Development):
+   - `MONGODB_URI`: a MongoDB Atlas connection string for this app's database. The local `127.0.0.1` fallback is development-only; production requests fail with a clear error if this variable is missing.
+   - `JWT_SECRET`: a long, random secret. Keep it private and consistent across deployments so existing sessions remain valid.
+   - `RAZORPAY_KEY_ID` and `RAZORPAY_KEY_SECRET`: matching Razorpay credentials for the chosen mode. Use Test Mode credentials for previews; use live credentials only for a production payment setup.
+   - `RAZORPAY_CURRENCY`: optional; defaults to `USD`.
+3. Configure the Atlas database's network access to permit connections from the deployed app. Use Vercel static egress if your Atlas allowlist requires fixed IPs; do not put database credentials in client-side (`NEXT_PUBLIC_`) variables.
+4. Seed the target database with `npm run seed` before launch. Set `MONGODB_URI` for that command to the same database configured for the deployment. The seed script adds starter products without replacing existing products.
+5. Deploy. After changing environment variables in Vercel, redeploy so the new values are available to the deployment.
+
+The API routes use the Node.js runtime and require a reachable MongoDB database at request time. Verify the deployed catalog, sign-in, and payment flow with the appropriate Razorpay mode before directing customers to the site.
+
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
